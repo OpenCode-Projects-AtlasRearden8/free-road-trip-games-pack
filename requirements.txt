@@ -1,0 +1,4 @@
+weasyprint>=60
+pillow>=10
+pypdf>=5
+pytest>=8

@@ -1,0 +1,259 @@
+/* Shared print styles for the free road trip games pack.
+   Unbranded, ink-light, US Letter. Also works fine on A4. */
+
+:root {
+  --ink: #1f2933;
+  --soft: #52606d;
+  --line: #9aa5b1;
+  --accent: #0b5e50;
+  --wash: #f0f4f8;
+}
+
+@page {
+  size: letter;
+  margin: 14mm 15mm;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  color: var(--ink);
+  font-family: "Noto Sans", "DejaVu Sans", "Arial", sans-serif;
+  font-size: 10.5pt;
+  line-height: 1.35;
+}
+
+header.sheet-header {
+  border-bottom: 2pt solid var(--accent);
+  padding-bottom: 6pt;
+  margin-bottom: 10pt;
+}
+
+header.sheet-header h1 {
+  font-size: 20pt;
+  margin: 0 0 2pt 0;
+}
+
+header.sheet-header .tagline {
+  color: var(--soft);
+  font-size: 9.5pt;
+  margin: 0;
+  font-style: italic;
+}
+
+.kicker {
+  text-transform: uppercase;
+  letter-spacing: 1.5pt;
+  font-size: 8pt;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 2pt;
+}
+
+h2 {
+  font-size: 13pt;
+  margin: 14pt 0 4pt 0;
+  color: var(--accent);
+}
+
+h3 {
+  font-size: 11pt;
+  margin: 10pt 0 3pt 0;
+}
+
+p {
+  margin: 4pt 0;
+}
+
+section {
+  break-inside: avoid;
+}
+
+.columns {
+  column-count: 2;
+  column-gap: 24pt;
+}
+
+.rules {
+  background: var(--wash);
+  border: 0.5pt solid var(--line);
+  border-radius: 4pt;
+  padding: 8pt 10pt;
+  margin: 8pt 0;
+}
+
+.rules ul,
+.gear ul {
+  margin: 4pt 0 2pt 14pt;
+  padding: 0;
+}
+
+.rules li,
+.gear li {
+  margin: 2pt 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Bingo grids */
+.bingo {
+  page-break-inside: avoid;
+  table-layout: fixed;
+}
+
+.bingo td {
+  border: 1pt solid var(--line);
+  height: 26mm;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 9pt;
+  padding: 3pt;
+}
+
+.bingo .free {
+  background: var(--accent);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 10pt;
+}
+
+.bingo td span {
+  display: block;
+}
+
+.bingo-label {
+  float: left;
+  font-weight: 800;
+  font-size: 10pt;
+  margin-top: 4pt;
+}
+
+/* Checklists (license plate hunt, quiet bingo variants) */
+.checklist {
+  counter-reset: item;
+}
+
+.checklist td {
+  border: 0;
+  border-bottom: 0.5pt dotted var(--line);
+  padding: 4.2pt 0;
+  font-size: 10pt;
+}
+
+.checklist td.box {
+  width: 18pt;
+}
+
+.tick {
+  display: inline-block;
+  width: 11pt;
+  height: 11pt;
+  border: 1pt solid var(--soft);
+  border-radius: 2pt;
+}
+
+/* Cut-out cards (story relay, twenty questions) */
+.cards {
+  table-layout: fixed;
+}
+
+.cards td {
+  border: 1pt dashed var(--soft);
+  height: 34mm;
+  vertical-align: middle;
+  text-align: center;
+  padding: 8pt;
+  font-size: 10pt;
+}
+
+.cards td .cardnum {
+  display: block;
+  font-size: 7pt;
+  color: var(--soft);
+  margin-bottom: 4pt;
+  letter-spacing: 1pt;
+}
+
+/* Memory / fill-in sheet */
+.fill-form {
+  table-layout: fixed;
+}
+
+.fill-form td {
+  padding: 4.6pt 2pt 2pt 0;
+  vertical-align: bottom;
+}
+
+.fill-form .label {
+  font-weight: 700;
+  font-size: 9.5pt;
+  color: var(--soft);
+}
+
+.writeline {
+  border-bottom: 1pt solid var(--ink);
+  height: 14pt;
+}
+
+.bigbox {
+  border: 1pt solid var(--line);
+  border-radius: 4pt;
+  height: 26mm;
+  margin-top: 4pt;
+  padding: 6pt;
+}
+
+.bigbox-caption {
+  font-size: 9pt;
+  color: var(--soft);
+  margin-top: 2pt;
+}
+
+.footer-note {
+  margin-top: 16pt;
+  padding-top: 6pt;
+  border-top: 0.5pt solid var(--line);
+  color: var(--soft);
+  font-size: 8pt;
+}
+
+footer.pagefoot {
+  margin-top: 10pt;
+  color: var(--soft);
+  font-size: 8pt;
+  border-top: 0.5pt solid var(--line);
+  padding-top: 4pt;
+}
+
+/* Cover sheet */
+.cover-grid {
+  margin-top: 10pt;
+}
+
+.cover-grid td {
+  border: 1pt solid var(--line);
+  border-radius: 4pt;
+  padding: 9pt;
+  height: 24mm;
+  vertical-align: top;
+  width: 33%;
+}
+
+.cover-grid .gtitle {
+  font-weight: 800;
+  color: var(--accent);
+  margin-bottom: 2pt;
+}
+
+.cover-grid .gwho {
+  color: var(--soft);
+  font-size: 8.5pt;
+}
